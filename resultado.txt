@@ -1,0 +1,2304 @@
+Expressao: 1+2
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 1D    1D
+D -> e     1
+Z -> e     1
+K -> +TK   1+TK
+T -> FZ    1+FZ
+F -> N     1+N
+N -> 2D    1+2D
+D -> e     1+2
+Z -> e     1+2
+K -> e     1+2
+
+Expressao: (3-4)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 3D    (3D
+D -> e     (3
+Z -> e     (3
+K -> -TK   (3-TK
+T -> FZ    (3-FZ
+F -> N     (3-N
+N -> 4D    (3-4D
+D -> e     (3-4
+Z -> e     (3-4
+K -> e     (3-4
+Z -> e     (3-4)
+K -> e     (3-4)
+
+Expressao: 5*6
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 5D    5D
+D -> e     5
+Z -> *FZ   5*FZ
+F -> N     5*N
+N -> 6D    5*6D
+D -> e     5*6
+Z -> e     5*6
+K -> e     5*6
+
+Expressao: 7/8
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 7D    7D
+D -> e     7
+Z -> /FZ   7/FZ
+F -> N     7/N
+N -> 8D    7/8D
+D -> e     7/8
+Z -> e     7/8
+K -> e     7/8
+
+Expressao: -9
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 9D    -9D
+D -> e     -9
+Z -> e     -9
+K -> e     -9
+
+Expressao: (1+2)*3
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 1D    (1D
+D -> e     (1
+Z -> e     (1
+K -> +TK   (1+TK
+T -> FZ    (1+FZ
+F -> N     (1+N
+N -> 2D    (1+2D
+D -> e     (1+2
+Z -> e     (1+2
+K -> e     (1+2
+Z -> *FZ   (1+2)*FZ
+F -> N     (1+2)*N
+N -> 3D    (1+2)*3D
+D -> e     (1+2)*3
+Z -> e     (1+2)*3
+K -> e     (1+2)*3
+
+Expressao: 4/(5+6)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 4D    4D
+D -> e     4
+Z -> /FZ   4/FZ
+F -> (S)   4/(S)
+S -> TK    4/(TK
+T -> FZ    4/(FZ
+F -> N     4/(N
+N -> 5D    4/(5D
+D -> e     4/(5
+Z -> e     4/(5
+K -> +TK   4/(5+TK
+T -> FZ    4/(5+FZ
+F -> N     4/(5+N
+N -> 6D    4/(5+6D
+D -> e     4/(5+6
+Z -> e     4/(5+6
+K -> e     4/(5+6
+Z -> e     4/(5+6)
+K -> e     4/(5+6)
+
+Expressao: -7+8
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 7D    -7D
+D -> e     -7
+Z -> e     -7
+K -> +TK   -7+TK
+T -> FZ    -7+FZ
+F -> N     -7+N
+N -> 8D    -7+8D
+D -> e     -7+8
+Z -> e     -7+8
+K -> e     -7+8
+
+Expressao: (9*1)-2
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 9D    (9D
+D -> e     (9
+Z -> *FZ   (9*FZ
+F -> N     (9*N
+N -> 1D    (9*1D
+D -> e     (9*1
+Z -> e     (9*1
+K -> e     (9*1
+Z -> e     (9*1)
+K -> -TK   (9*1)-TK
+T -> FZ    (9*1)-FZ
+F -> N     (9*1)-N
+N -> 2D    (9*1)-2D
+D -> e     (9*1)-2
+Z -> e     (9*1)-2
+K -> e     (9*1)-2
+
+Expressao: 3-4+5
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 3D    3D
+D -> e     3
+Z -> e     3
+K -> -TK   3-TK
+T -> FZ    3-FZ
+F -> N     3-N
+N -> 4D    3-4D
+D -> e     3-4
+Z -> e     3-4
+K -> +TK   3-4+TK
+T -> FZ    3-4+FZ
+F -> N     3-4+N
+N -> 5D    3-4+5D
+D -> e     3-4+5
+Z -> e     3-4+5
+K -> e     3-4+5
+
+Expressao: (6+7)*(8-9)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 6D    (6D
+D -> e     (6
+Z -> e     (6
+K -> +TK   (6+TK
+T -> FZ    (6+FZ
+F -> N     (6+N
+N -> 7D    (6+7D
+D -> e     (6+7
+Z -> e     (6+7
+K -> e     (6+7
+Z -> *FZ   (6+7)*FZ
+F -> (S)   (6+7)*(S)
+S -> TK    (6+7)*(TK
+T -> FZ    (6+7)*(FZ
+F -> N     (6+7)*(N
+N -> 8D    (6+7)*(8D
+D -> e     (6+7)*(8
+Z -> e     (6+7)*(8
+K -> -TK   (6+7)*(8-TK
+T -> FZ    (6+7)*(8-FZ
+F -> N     (6+7)*(8-N
+N -> 9D    (6+7)*(8-9D
+D -> e     (6+7)*(8-9
+Z -> e     (6+7)*(8-9
+K -> e     (6+7)*(8-9
+Z -> e     (6+7)*(8-9)
+K -> e     (6+7)*(8-9)
+
+Expressao: 1*(2+3)/4
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 1D    1D
+D -> e     1
+Z -> *FZ   1*FZ
+F -> (S)   1*(S)
+S -> TK    1*(TK
+T -> FZ    1*(FZ
+F -> N     1*(N
+N -> 2D    1*(2D
+D -> e     1*(2
+Z -> e     1*(2
+K -> +TK   1*(2+TK
+T -> FZ    1*(2+FZ
+F -> N     1*(2+N
+N -> 3D    1*(2+3D
+D -> e     1*(2+3
+Z -> e     1*(2+3
+K -> e     1*(2+3
+Z -> /FZ   1*(2+3)/FZ
+F -> N     1*(2+3)/N
+N -> 4D    1*(2+3)/4D
+D -> e     1*(2+3)/4
+Z -> e     1*(2+3)/4
+K -> e     1*(2+3)/4
+
+Expressao: -5+6/7
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 5D    -5D
+D -> e     -5
+Z -> e     -5
+K -> +TK   -5+TK
+T -> FZ    -5+FZ
+F -> N     -5+N
+N -> 6D    -5+6D
+D -> e     -5+6
+Z -> /FZ   -5+6/FZ
+F -> N     -5+6/N
+N -> 7D    -5+6/7D
+D -> e     -5+6/7
+Z -> e     -5+6/7
+K -> e     -5+6/7
+
+Expressao: (8/9)*1
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 8D    (8D
+D -> e     (8
+Z -> /FZ   (8/FZ
+F -> N     (8/N
+N -> 9D    (8/9D
+D -> e     (8/9
+Z -> e     (8/9
+K -> e     (8/9
+Z -> *FZ   (8/9)*FZ
+F -> N     (8/9)*N
+N -> 1D    (8/9)*1D
+D -> e     (8/9)*1
+Z -> e     (8/9)*1
+K -> e     (8/9)*1
+
+Expressao: 2+3-4
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 2D    2D
+D -> e     2
+Z -> e     2
+K -> +TK   2+TK
+T -> FZ    2+FZ
+F -> N     2+N
+N -> 3D    2+3D
+D -> e     2+3
+Z -> e     2+3
+K -> -TK   2+3-TK
+T -> FZ    2+3-FZ
+F -> N     2+3-N
+N -> 4D    2+3-4D
+D -> e     2+3-4
+Z -> e     2+3-4
+K -> e     2+3-4
+
+Expressao: (5*6)-(7/8)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 5D    (5D
+D -> e     (5
+Z -> *FZ   (5*FZ
+F -> N     (5*N
+N -> 6D    (5*6D
+D -> e     (5*6
+Z -> e     (5*6
+K -> e     (5*6
+Z -> e     (5*6)
+K -> -TK   (5*6)-TK
+T -> FZ    (5*6)-FZ
+F -> (S)   (5*6)-(S)
+S -> TK    (5*6)-(TK
+T -> FZ    (5*6)-(FZ
+F -> N     (5*6)-(N
+N -> 7D    (5*6)-(7D
+D -> e     (5*6)-(7
+Z -> /FZ   (5*6)-(7/FZ
+F -> N     (5*6)-(7/N
+N -> 8D    (5*6)-(7/8D
+D -> e     (5*6)-(7/8
+Z -> e     (5*6)-(7/8
+K -> e     (5*6)-(7/8
+Z -> e     (5*6)-(7/8)
+K -> e     (5*6)-(7/8)
+
+Expressao: -9+1
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 9D    -9D
+D -> e     -9
+Z -> e     -9
+K -> +TK   -9+TK
+T -> FZ    -9+FZ
+F -> N     -9+N
+N -> 1D    -9+1D
+D -> e     -9+1
+Z -> e     -9+1
+K -> e     -9+1
+
+Expressao: 2*(3+(4-5))
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 2D    2D
+D -> e     2
+Z -> *FZ   2*FZ
+F -> (S)   2*(S)
+S -> TK    2*(TK
+T -> FZ    2*(FZ
+F -> N     2*(N
+N -> 3D    2*(3D
+D -> e     2*(3
+Z -> e     2*(3
+K -> +TK   2*(3+TK
+T -> FZ    2*(3+FZ
+F -> (S)   2*(3+(S)
+S -> TK    2*(3+(TK
+T -> FZ    2*(3+(FZ
+F -> N     2*(3+(N
+N -> 4D    2*(3+(4D
+D -> e     2*(3+(4
+Z -> e     2*(3+(4
+K -> -TK   2*(3+(4-TK
+T -> FZ    2*(3+(4-FZ
+F -> N     2*(3+(4-N
+N -> 5D    2*(3+(4-5D
+D -> e     2*(3+(4-5
+Z -> e     2*(3+(4-5
+K -> e     2*(3+(4-5
+Z -> e     2*(3+(4-5)
+K -> e     2*(3+(4-5)
+Z -> e     2*(3+(4-5))
+K -> e     2*(3+(4-5))
+
+Expressao: (6/7)*8
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 6D    (6D
+D -> e     (6
+Z -> /FZ   (6/FZ
+F -> N     (6/N
+N -> 7D    (6/7D
+D -> e     (6/7
+Z -> e     (6/7
+K -> e     (6/7
+Z -> *FZ   (6/7)*FZ
+F -> N     (6/7)*N
+N -> 8D    (6/7)*8D
+D -> e     (6/7)*8
+Z -> e     (6/7)*8
+K -> e     (6/7)*8
+
+Expressao: -9+(1-2)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 9D    -9D
+D -> e     -9
+Z -> e     -9
+K -> +TK   -9+TK
+T -> FZ    -9+FZ
+F -> (S)   -9+(S)
+S -> TK    -9+(TK
+T -> FZ    -9+(FZ
+F -> N     -9+(N
+N -> 1D    -9+(1D
+D -> e     -9+(1
+Z -> e     -9+(1
+K -> -TK   -9+(1-TK
+T -> FZ    -9+(1-FZ
+F -> N     -9+(1-N
+N -> 2D    -9+(1-2D
+D -> e     -9+(1-2
+Z -> e     -9+(1-2
+K -> e     -9+(1-2
+Z -> e     -9+(1-2)
+K -> e     -9+(1-2)
+
+Expressao: 3*(4-5)+6
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 3D    3D
+D -> e     3
+Z -> *FZ   3*FZ
+F -> (S)   3*(S)
+S -> TK    3*(TK
+T -> FZ    3*(FZ
+F -> N     3*(N
+N -> 4D    3*(4D
+D -> e     3*(4
+Z -> e     3*(4
+K -> -TK   3*(4-TK
+T -> FZ    3*(4-FZ
+F -> N     3*(4-N
+N -> 5D    3*(4-5D
+D -> e     3*(4-5
+Z -> e     3*(4-5
+K -> e     3*(4-5
+Z -> e     3*(4-5)
+K -> +TK   3*(4-5)+TK
+T -> FZ    3*(4-5)+FZ
+F -> N     3*(4-5)+N
+N -> 6D    3*(4-5)+6D
+D -> e     3*(4-5)+6
+Z -> e     3*(4-5)+6
+K -> e     3*(4-5)+6
+
+Expressao: (7+8)/9
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 7D    (7D
+D -> e     (7
+Z -> e     (7
+K -> +TK   (7+TK
+T -> FZ    (7+FZ
+F -> N     (7+N
+N -> 8D    (7+8D
+D -> e     (7+8
+Z -> e     (7+8
+K -> e     (7+8
+Z -> /FZ   (7+8)/FZ
+F -> N     (7+8)/N
+N -> 9D    (7+8)/9D
+D -> e     (7+8)/9
+Z -> e     (7+8)/9
+K -> e     (7+8)/9
+
+Expressao: -1+2*3
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 1D    -1D
+D -> e     -1
+Z -> e     -1
+K -> +TK   -1+TK
+T -> FZ    -1+FZ
+F -> N     -1+N
+N -> 2D    -1+2D
+D -> e     -1+2
+Z -> *FZ   -1+2*FZ
+F -> N     -1+2*N
+N -> 3D    -1+2*3D
+D -> e     -1+2*3
+Z -> e     -1+2*3
+K -> e     -1+2*3
+
+Expressao: (4-5)*(6/7)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 4D    (4D
+D -> e     (4
+Z -> e     (4
+K -> -TK   (4-TK
+T -> FZ    (4-FZ
+F -> N     (4-N
+N -> 5D    (4-5D
+D -> e     (4-5
+Z -> e     (4-5
+K -> e     (4-5
+Z -> *FZ   (4-5)*FZ
+F -> (S)   (4-5)*(S)
+S -> TK    (4-5)*(TK
+T -> FZ    (4-5)*(FZ
+F -> N     (4-5)*(N
+N -> 6D    (4-5)*(6D
+D -> e     (4-5)*(6
+Z -> /FZ   (4-5)*(6/FZ
+F -> N     (4-5)*(6/N
+N -> 7D    (4-5)*(6/7D
+D -> e     (4-5)*(6/7
+Z -> e     (4-5)*(6/7
+K -> e     (4-5)*(6/7
+Z -> e     (4-5)*(6/7)
+K -> e     (4-5)*(6/7)
+
+Expressao: 8/9+1
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 8D    8D
+D -> e     8
+Z -> /FZ   8/FZ
+F -> N     8/N
+N -> 9D    8/9D
+D -> e     8/9
+Z -> e     8/9
+K -> +TK   8/9+TK
+T -> FZ    8/9+FZ
+F -> N     8/9+N
+N -> 1D    8/9+1D
+D -> e     8/9+1
+Z -> e     8/9+1
+K -> e     8/9+1
+
+Expressao: (2+3)*(4-5)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 2D    (2D
+D -> e     (2
+Z -> e     (2
+K -> +TK   (2+TK
+T -> FZ    (2+FZ
+F -> N     (2+N
+N -> 3D    (2+3D
+D -> e     (2+3
+Z -> e     (2+3
+K -> e     (2+3
+Z -> *FZ   (2+3)*FZ
+F -> (S)   (2+3)*(S)
+S -> TK    (2+3)*(TK
+T -> FZ    (2+3)*(FZ
+F -> N     (2+3)*(N
+N -> 4D    (2+3)*(4D
+D -> e     (2+3)*(4
+Z -> e     (2+3)*(4
+K -> -TK   (2+3)*(4-TK
+T -> FZ    (2+3)*(4-FZ
+F -> N     (2+3)*(4-N
+N -> 5D    (2+3)*(4-5D
+D -> e     (2+3)*(4-5
+Z -> e     (2+3)*(4-5
+K -> e     (2+3)*(4-5
+Z -> e     (2+3)*(4-5)
+K -> e     (2+3)*(4-5)
+
+Expressao: -6+7/8
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 6D    -6D
+D -> e     -6
+Z -> e     -6
+K -> +TK   -6+TK
+T -> FZ    -6+FZ
+F -> N     -6+N
+N -> 7D    -6+7D
+D -> e     -6+7
+Z -> /FZ   -6+7/FZ
+F -> N     -6+7/N
+N -> 8D    -6+7/8D
+D -> e     -6+7/8
+Z -> e     -6+7/8
+K -> e     -6+7/8
+
+Expressao: (9-1)*2
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 9D    (9D
+D -> e     (9
+Z -> e     (9
+K -> -TK   (9-TK
+T -> FZ    (9-FZ
+F -> N     (9-N
+N -> 1D    (9-1D
+D -> e     (9-1
+Z -> e     (9-1
+K -> e     (9-1
+Z -> *FZ   (9-1)*FZ
+F -> N     (9-1)*N
+N -> 2D    (9-1)*2D
+D -> e     (9-1)*2
+Z -> e     (9-1)*2
+K -> e     (9-1)*2
+
+Expressao: 3+(4*5)-6
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 3D    3D
+D -> e     3
+Z -> e     3
+K -> +TK   3+TK
+T -> FZ    3+FZ
+F -> (S)   3+(S)
+S -> TK    3+(TK
+T -> FZ    3+(FZ
+F -> N     3+(N
+N -> 4D    3+(4D
+D -> e     3+(4
+Z -> *FZ   3+(4*FZ
+F -> N     3+(4*N
+N -> 5D    3+(4*5D
+D -> e     3+(4*5
+Z -> e     3+(4*5
+K -> e     3+(4*5
+Z -> e     3+(4*5)
+K -> -TK   3+(4*5)-TK
+T -> FZ    3+(4*5)-FZ
+F -> N     3+(4*5)-N
+N -> 6D    3+(4*5)-6D
+D -> e     3+(4*5)-6
+Z -> e     3+(4*5)-6
+K -> e     3+(4*5)-6
+
+Expressao: (7/8)+9
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 7D    (7D
+D -> e     (7
+Z -> /FZ   (7/FZ
+F -> N     (7/N
+N -> 8D    (7/8D
+D -> e     (7/8
+Z -> e     (7/8
+K -> e     (7/8
+Z -> e     (7/8)
+K -> +TK   (7/8)+TK
+T -> FZ    (7/8)+FZ
+F -> N     (7/8)+N
+N -> 9D    (7/8)+9D
+D -> e     (7/8)+9
+Z -> e     (7/8)+9
+K -> e     (7/8)+9
+
+Expressao: -1+2
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 1D    -1D
+D -> e     -1
+Z -> e     -1
+K -> +TK   -1+TK
+T -> FZ    -1+FZ
+F -> N     -1+N
+N -> 2D    -1+2D
+D -> e     -1+2
+Z -> e     -1+2
+K -> e     -1+2
+
+Expressao: 3*(4+(5/6))
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 3D    3D
+D -> e     3
+Z -> *FZ   3*FZ
+F -> (S)   3*(S)
+S -> TK    3*(TK
+T -> FZ    3*(FZ
+F -> N     3*(N
+N -> 4D    3*(4D
+D -> e     3*(4
+Z -> e     3*(4
+K -> +TK   3*(4+TK
+T -> FZ    3*(4+FZ
+F -> (S)   3*(4+(S)
+S -> TK    3*(4+(TK
+T -> FZ    3*(4+(FZ
+F -> N     3*(4+(N
+N -> 5D    3*(4+(5D
+D -> e     3*(4+(5
+Z -> /FZ   3*(4+(5/FZ
+F -> N     3*(4+(5/N
+N -> 6D    3*(4+(5/6D
+D -> e     3*(4+(5/6
+Z -> e     3*(4+(5/6
+K -> e     3*(4+(5/6
+Z -> e     3*(4+(5/6)
+K -> e     3*(4+(5/6)
+Z -> e     3*(4+(5/6))
+K -> e     3*(4+(5/6))
+
+Expressao: (7-8)+9
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 7D    (7D
+D -> e     (7
+Z -> e     (7
+K -> -TK   (7-TK
+T -> FZ    (7-FZ
+F -> N     (7-N
+N -> 8D    (7-8D
+D -> e     (7-8
+Z -> e     (7-8
+K -> e     (7-8
+Z -> e     (7-8)
+K -> +TK   (7-8)+TK
+T -> FZ    (7-8)+FZ
+F -> N     (7-8)+N
+N -> 9D    (7-8)+9D
+D -> e     (7-8)+9
+Z -> e     (7-8)+9
+K -> e     (7-8)+9
+
+Expressao: 1*(2+3)-(4/5)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 1D    1D
+D -> e     1
+Z -> *FZ   1*FZ
+F -> (S)   1*(S)
+S -> TK    1*(TK
+T -> FZ    1*(FZ
+F -> N     1*(N
+N -> 2D    1*(2D
+D -> e     1*(2
+Z -> e     1*(2
+K -> +TK   1*(2+TK
+T -> FZ    1*(2+FZ
+F -> N     1*(2+N
+N -> 3D    1*(2+3D
+D -> e     1*(2+3
+Z -> e     1*(2+3
+K -> e     1*(2+3
+Z -> e     1*(2+3)
+K -> -TK   1*(2+3)-TK
+T -> FZ    1*(2+3)-FZ
+F -> (S)   1*(2+3)-(S)
+S -> TK    1*(2+3)-(TK
+T -> FZ    1*(2+3)-(FZ
+F -> N     1*(2+3)-(N
+N -> 4D    1*(2+3)-(4D
+D -> e     1*(2+3)-(4
+Z -> /FZ   1*(2+3)-(4/FZ
+F -> N     1*(2+3)-(4/N
+N -> 5D    1*(2+3)-(4/5D
+D -> e     1*(2+3)-(4/5
+Z -> e     1*(2+3)-(4/5
+K -> e     1*(2+3)-(4/5
+Z -> e     1*(2+3)-(4/5)
+K -> e     1*(2+3)-(4/5)
+
+Expressao: -6+7
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 6D    -6D
+D -> e     -6
+Z -> e     -6
+K -> +TK   -6+TK
+T -> FZ    -6+FZ
+F -> N     -6+N
+N -> 7D    -6+7D
+D -> e     -6+7
+Z -> e     -6+7
+K -> e     -6+7
+
+Expressao: (8*9)/(1-2)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 8D    (8D
+D -> e     (8
+Z -> *FZ   (8*FZ
+F -> N     (8*N
+N -> 9D    (8*9D
+D -> e     (8*9
+Z -> e     (8*9
+K -> e     (8*9
+Z -> /FZ   (8*9)/FZ
+F -> (S)   (8*9)/(S)
+S -> TK    (8*9)/(TK
+T -> FZ    (8*9)/(FZ
+F -> N     (8*9)/(N
+N -> 1D    (8*9)/(1D
+D -> e     (8*9)/(1
+Z -> e     (8*9)/(1
+K -> -TK   (8*9)/(1-TK
+T -> FZ    (8*9)/(1-FZ
+F -> N     (8*9)/(1-N
+N -> 2D    (8*9)/(1-2D
+D -> e     (8*9)/(1-2
+Z -> e     (8*9)/(1-2
+K -> e     (8*9)/(1-2
+Z -> e     (8*9)/(1-2)
+K -> e     (8*9)/(1-2)
+
+Expressao: 3+4-5
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 3D    3D
+D -> e     3
+Z -> e     3
+K -> +TK   3+TK
+T -> FZ    3+FZ
+F -> N     3+N
+N -> 4D    3+4D
+D -> e     3+4
+Z -> e     3+4
+K -> -TK   3+4-TK
+T -> FZ    3+4-FZ
+F -> N     3+4-N
+N -> 5D    3+4-5D
+D -> e     3+4-5
+Z -> e     3+4-5
+K -> e     3+4-5
+
+Expressao: (6/7)*8+9
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 6D    (6D
+D -> e     (6
+Z -> /FZ   (6/FZ
+F -> N     (6/N
+N -> 7D    (6/7D
+D -> e     (6/7
+Z -> e     (6/7
+K -> e     (6/7
+Z -> *FZ   (6/7)*FZ
+F -> N     (6/7)*N
+N -> 8D    (6/7)*8D
+D -> e     (6/7)*8
+Z -> e     (6/7)*8
+K -> +TK   (6/7)*8+TK
+T -> FZ    (6/7)*8+FZ
+F -> N     (6/7)*8+N
+N -> 9D    (6/7)*8+9D
+D -> e     (6/7)*8+9
+Z -> e     (6/7)*8+9
+K -> e     (6/7)*8+9
+
+Expressao: -1*(2-3)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 1D    -1D
+D -> e     -1
+Z -> *FZ   -1*FZ
+F -> (S)   -1*(S)
+S -> TK    -1*(TK
+T -> FZ    -1*(FZ
+F -> N     -1*(N
+N -> 2D    -1*(2D
+D -> e     -1*(2
+Z -> e     -1*(2
+K -> -TK   -1*(2-TK
+T -> FZ    -1*(2-FZ
+F -> N     -1*(2-N
+N -> 3D    -1*(2-3D
+D -> e     -1*(2-3
+Z -> e     -1*(2-3
+K -> e     -1*(2-3
+Z -> e     -1*(2-3)
+K -> e     -1*(2-3)
+
+Expressao: (4+5)*(6-7)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 4D    (4D
+D -> e     (4
+Z -> e     (4
+K -> +TK   (4+TK
+T -> FZ    (4+FZ
+F -> N     (4+N
+N -> 5D    (4+5D
+D -> e     (4+5
+Z -> e     (4+5
+K -> e     (4+5
+Z -> *FZ   (4+5)*FZ
+F -> (S)   (4+5)*(S)
+S -> TK    (4+5)*(TK
+T -> FZ    (4+5)*(FZ
+F -> N     (4+5)*(N
+N -> 6D    (4+5)*(6D
+D -> e     (4+5)*(6
+Z -> e     (4+5)*(6
+K -> -TK   (4+5)*(6-TK
+T -> FZ    (4+5)*(6-FZ
+F -> N     (4+5)*(6-N
+N -> 7D    (4+5)*(6-7D
+D -> e     (4+5)*(6-7
+Z -> e     (4+5)*(6-7
+K -> e     (4+5)*(6-7
+Z -> e     (4+5)*(6-7)
+K -> e     (4+5)*(6-7)
+
+Expressao: 8/9+1-2
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 8D    8D
+D -> e     8
+Z -> /FZ   8/FZ
+F -> N     8/N
+N -> 9D    8/9D
+D -> e     8/9
+Z -> e     8/9
+K -> +TK   8/9+TK
+T -> FZ    8/9+FZ
+F -> N     8/9+N
+N -> 1D    8/9+1D
+D -> e     8/9+1
+Z -> e     8/9+1
+K -> -TK   8/9+1-TK
+T -> FZ    8/9+1-FZ
+F -> N     8/9+1-N
+N -> 2D    8/9+1-2D
+D -> e     8/9+1-2
+Z -> e     8/9+1-2
+K -> e     8/9+1-2
+
+Expressao: (3+4)-5*6
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 3D    (3D
+D -> e     (3
+Z -> e     (3
+K -> +TK   (3+TK
+T -> FZ    (3+FZ
+F -> N     (3+N
+N -> 4D    (3+4D
+D -> e     (3+4
+Z -> e     (3+4
+K -> e     (3+4
+Z -> e     (3+4)
+K -> -TK   (3+4)-TK
+T -> FZ    (3+4)-FZ
+F -> N     (3+4)-N
+N -> 5D    (3+4)-5D
+D -> e     (3+4)-5
+Z -> *FZ   (3+4)-5*FZ
+F -> N     (3+4)-5*N
+N -> 6D    (3+4)-5*6D
+D -> e     (3+4)-5*6
+Z -> e     (3+4)-5*6
+K -> e     (3+4)-5*6
+
+Expressao: -7+8*(9/1)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 7D    -7D
+D -> e     -7
+Z -> e     -7
+K -> +TK   -7+TK
+T -> FZ    -7+FZ
+F -> N     -7+N
+N -> 8D    -7+8D
+D -> e     -7+8
+Z -> *FZ   -7+8*FZ
+F -> (S)   -7+8*(S)
+S -> TK    -7+8*(TK
+T -> FZ    -7+8*(FZ
+F -> N     -7+8*(N
+N -> 9D    -7+8*(9D
+D -> e     -7+8*(9
+Z -> /FZ   -7+8*(9/FZ
+F -> N     -7+8*(9/N
+N -> 1D    -7+8*(9/1D
+D -> e     -7+8*(9/1
+Z -> e     -7+8*(9/1
+K -> e     -7+8*(9/1
+Z -> e     -7+8*(9/1)
+K -> e     -7+8*(9/1)
+
+Expressao: (2+3)*4
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 2D    (2D
+D -> e     (2
+Z -> e     (2
+K -> +TK   (2+TK
+T -> FZ    (2+FZ
+F -> N     (2+N
+N -> 3D    (2+3D
+D -> e     (2+3
+Z -> e     (2+3
+K -> e     (2+3
+Z -> *FZ   (2+3)*FZ
+F -> N     (2+3)*N
+N -> 4D    (2+3)*4D
+D -> e     (2+3)*4
+Z -> e     (2+3)*4
+K -> e     (2+3)*4
+
+Expressao: 5-(6/7)*8
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 5D    5D
+D -> e     5
+Z -> e     5
+K -> -TK   5-TK
+T -> FZ    5-FZ
+F -> (S)   5-(S)
+S -> TK    5-(TK
+T -> FZ    5-(FZ
+F -> N     5-(N
+N -> 6D    5-(6D
+D -> e     5-(6
+Z -> /FZ   5-(6/FZ
+F -> N     5-(6/N
+N -> 7D    5-(6/7D
+D -> e     5-(6/7
+Z -> e     5-(6/7
+K -> e     5-(6/7
+Z -> *FZ   5-(6/7)*FZ
+F -> N     5-(6/7)*N
+N -> 8D    5-(6/7)*8D
+D -> e     5-(6/7)*8
+Z -> e     5-(6/7)*8
+K -> e     5-(6/7)*8
+
+Expressao: -9+1*(2-3)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 9D    -9D
+D -> e     -9
+Z -> e     -9
+K -> +TK   -9+TK
+T -> FZ    -9+FZ
+F -> N     -9+N
+N -> 1D    -9+1D
+D -> e     -9+1
+Z -> *FZ   -9+1*FZ
+F -> (S)   -9+1*(S)
+S -> TK    -9+1*(TK
+T -> FZ    -9+1*(FZ
+F -> N     -9+1*(N
+N -> 2D    -9+1*(2D
+D -> e     -9+1*(2
+Z -> e     -9+1*(2
+K -> -TK   -9+1*(2-TK
+T -> FZ    -9+1*(2-FZ
+F -> N     -9+1*(2-N
+N -> 3D    -9+1*(2-3D
+D -> e     -9+1*(2-3
+Z -> e     -9+1*(2-3
+K -> e     -9+1*(2-3
+Z -> e     -9+1*(2-3)
+K -> e     -9+1*(2-3)
+
+Expressao: (4+5)-(6*7)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 4D    (4D
+D -> e     (4
+Z -> e     (4
+K -> +TK   (4+TK
+T -> FZ    (4+FZ
+F -> N     (4+N
+N -> 5D    (4+5D
+D -> e     (4+5
+Z -> e     (4+5
+K -> e     (4+5
+Z -> e     (4+5)
+K -> -TK   (4+5)-TK
+T -> FZ    (4+5)-FZ
+F -> (S)   (4+5)-(S)
+S -> TK    (4+5)-(TK
+T -> FZ    (4+5)-(FZ
+F -> N     (4+5)-(N
+N -> 6D    (4+5)-(6D
+D -> e     (4+5)-(6
+Z -> *FZ   (4+5)-(6*FZ
+F -> N     (4+5)-(6*N
+N -> 7D    (4+5)-(6*7D
+D -> e     (4+5)-(6*7
+Z -> e     (4+5)-(6*7
+K -> e     (4+5)-(6*7
+Z -> e     (4+5)-(6*7)
+K -> e     (4+5)-(6*7)
+
+Expressao: 8/(9+1)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 8D    8D
+D -> e     8
+Z -> /FZ   8/FZ
+F -> (S)   8/(S)
+S -> TK    8/(TK
+T -> FZ    8/(FZ
+F -> N     8/(N
+N -> 9D    8/(9D
+D -> e     8/(9
+Z -> e     8/(9
+K -> +TK   8/(9+TK
+T -> FZ    8/(9+FZ
+F -> N     8/(9+N
+N -> 1D    8/(9+1D
+D -> e     8/(9+1
+Z -> e     8/(9+1
+K -> e     8/(9+1
+Z -> e     8/(9+1)
+K -> e     8/(9+1)
+
+Expressao: -2+3*(4-5)
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 2D    -2D
+D -> e     -2
+Z -> e     -2
+K -> +TK   -2+TK
+T -> FZ    -2+FZ
+F -> N     -2+N
+N -> 3D    -2+3D
+D -> e     -2+3
+Z -> *FZ   -2+3*FZ
+F -> (S)   -2+3*(S)
+S -> TK    -2+3*(TK
+T -> FZ    -2+3*(FZ
+F -> N     -2+3*(N
+N -> 4D    -2+3*(4D
+D -> e     -2+3*(4
+Z -> e     -2+3*(4
+K -> -TK   -2+3*(4-TK
+T -> FZ    -2+3*(4-FZ
+F -> N     -2+3*(4-N
+N -> 5D    -2+3*(4-5D
+D -> e     -2+3*(4-5
+Z -> e     -2+3*(4-5
+K -> e     -2+3*(4-5
+Z -> e     -2+3*(4-5)
+K -> e     -2+3*(4-5)
+
+Expressao: (6-7)+8/9
+Esperado: Aceita | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 6D    (6D
+D -> e     (6
+Z -> e     (6
+K -> -TK   (6-TK
+T -> FZ    (6-FZ
+F -> N     (6-N
+N -> 7D    (6-7D
+D -> e     (6-7
+Z -> e     (6-7
+K -> e     (6-7
+Z -> e     (6-7)
+K -> +TK   (6-7)+TK
+T -> FZ    (6-7)+FZ
+F -> N     (6-7)+N
+N -> 8D    (6-7)+8D
+D -> e     (6-7)+8
+Z -> /FZ   (6-7)+8/FZ
+F -> N     (6-7)+8/N
+N -> 9D    (6-7)+8/9D
+D -> e     (6-7)+8/9
+Z -> e     (6-7)+8/9
+K -> e     (6-7)+8/9
+
+Expressao: 1+
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 1D    1D
+D -> e     1
+Z -> e     1
+K -> +TK   1+TK
+T -> FZ    1+FZ
+F -> N     1+N
+
+Expressao: +2
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+
+Expressao: (3-
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 3D    (3D
+D -> e     (3
+Z -> e     (3
+K -> -TK   (3-TK
+T -> FZ    (3-FZ
+F -> N     (3-N
+
+Expressao: 4*
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 4D    4D
+D -> e     4
+Z -> *FZ   4*FZ
+F -> N     4*N
+
+Expressao: -5*
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 5D    -5D
+D -> e     -5
+Z -> *FZ   -5*FZ
+F -> N     -5*N
+
+Expressao: 6/)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 6D    6D
+D -> e     6
+Z -> /FZ   6/FZ
+F -> N     6/N
+
+Expressao: (7+8
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 7D    (7D
+D -> e     (7
+Z -> e     (7
+K -> +TK   (7+TK
+T -> FZ    (7+FZ
+F -> N     (7+N
+N -> 8D    (7+8D
+D -> e     (7+8
+Z -> e     (7+8
+K -> e     (7+8
+
+Expressao: -9(
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 9D    -9D
+D -> e     -9
+Z -> e     -9
+K -> e     -9
+
+Expressao: 1-+2
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 1D    1D
+D -> e     1
+Z -> e     1
+K -> -TK   1-TK
+T -> FZ    1-FZ
+F -> N     1-N
+
+Expressao: (3/4+)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 3D    (3D
+D -> e     (3
+Z -> /FZ   (3/FZ
+F -> N     (3/N
+N -> 4D    (3/4D
+D -> e     (3/4
+Z -> e     (3/4
+K -> +TK   (3/4+TK
+T -> FZ    (3/4+FZ
+F -> N     (3/4+N
+
+Expressao: 5*(6+)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 5D    5D
+D -> e     5
+Z -> *FZ   5*FZ
+F -> (S)   5*(S)
+S -> TK    5*(TK
+T -> FZ    5*(FZ
+F -> N     5*(N
+N -> 6D    5*(6D
+D -> e     5*(6
+Z -> e     5*(6
+K -> +TK   5*(6+TK
+T -> FZ    5*(6+FZ
+F -> N     5*(6+N
+
+Expressao: -7+8/
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 7D    -7D
+D -> e     -7
+Z -> e     -7
+K -> +TK   -7+TK
+T -> FZ    -7+FZ
+F -> N     -7+N
+N -> 8D    -7+8D
+D -> e     -7+8
+Z -> /FZ   -7+8/FZ
+F -> N     -7+8/N
+
+Expressao: 9**
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 9D    9D
+D -> e     9
+Z -> *FZ   9*FZ
+F -> N     9*N
+
+Expressao: /1
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+
+Expressao: 2+*3
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 2D    2D
+D -> e     2
+Z -> e     2
+K -> +TK   2+TK
+T -> FZ    2+FZ
+F -> N     2+N
+
+Expressao: (4-5)-
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 4D    (4D
+D -> e     (4
+Z -> e     (4
+K -> -TK   (4-TK
+T -> FZ    (4-FZ
+F -> N     (4-N
+N -> 5D    (4-5D
+D -> e     (4-5
+Z -> e     (4-5
+K -> e     (4-5
+Z -> e     (4-5)
+K -> -TK   (4-5)-TK
+T -> FZ    (4-5)-FZ
+F -> N     (4-5)-N
+
+Expressao: 6(7+8)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 6D    6D
+D -> e     6
+Z -> e     6
+K -> e     6
+
+Expressao: -9/1+
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 9D    -9D
+D -> e     -9
+Z -> /FZ   -9/FZ
+F -> N     -9/N
+N -> 1D    -9/1D
+D -> e     -9/1
+Z -> e     -9/1
+K -> +TK   -9/1+TK
+T -> FZ    -9/1+FZ
+F -> N     -9/1+N
+
+Expressao: (2+3-)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 2D    (2D
+D -> e     (2
+Z -> e     (2
+K -> +TK   (2+TK
+T -> FZ    (2+FZ
+F -> N     (2+N
+N -> 3D    (2+3D
+D -> e     (2+3
+Z -> e     (2+3
+K -> -TK   (2+3-TK
+T -> FZ    (2+3-FZ
+F -> N     (2+3-N
+
+Expressao: 4*(5+6))
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 4D    4D
+D -> e     4
+Z -> *FZ   4*FZ
+F -> (S)   4*(S)
+S -> TK    4*(TK
+T -> FZ    4*(FZ
+F -> N     4*(N
+N -> 5D    4*(5D
+D -> e     4*(5
+Z -> e     4*(5
+K -> +TK   4*(5+TK
+T -> FZ    4*(5+FZ
+F -> N     4*(5+N
+N -> 6D    4*(5+6D
+D -> e     4*(5+6
+Z -> e     4*(5+6
+K -> e     4*(5+6
+Z -> e     4*(5+6)
+K -> e     4*(5+6)
+
+Expressao: 7+(8*)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 7D    7D
+D -> e     7
+Z -> e     7
+K -> +TK   7+TK
+T -> FZ    7+FZ
+F -> (S)   7+(S)
+S -> TK    7+(TK
+T -> FZ    7+(FZ
+F -> N     7+(N
+N -> 8D    7+(8D
+D -> e     7+(8
+Z -> *FZ   7+(8*FZ
+F -> N     7+(8*N
+
+Expressao: -9(/1)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 9D    -9D
+D -> e     -9
+Z -> e     -9
+K -> e     -9
+
+Expressao: 2++3
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 2D    2D
+D -> e     2
+Z -> e     2
+K -> +TK   2+TK
+T -> FZ    2+FZ
+F -> N     2+N
+
+Expressao: (4--5)
+Esperado: Rejeitada | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 4D    (4D
+D -> e     (4
+Z -> e     (4
+K -> -TK   (4-TK
+T -> FZ    (4-FZ
+F -> -N    (4-N
+N -> 5D    (4--5D
+D -> e     (4--5
+Z -> e     (4--5
+K -> e     (4--5
+Z -> e     (4--5)
+K -> e     (4--5)
+
+Expressao: 6*/7
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 6D    6D
+D -> e     6
+Z -> *FZ   6*FZ
+F -> N     6*N
+
+Expressao: -8/9)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 8D    -8D
+D -> e     -8
+Z -> /FZ   -8/FZ
+F -> N     -8/N
+N -> 9D    -8/9D
+D -> e     -8/9
+Z -> e     -8/9
+K -> e     -8/9
+
+Expressao: (1+2**
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 1D    (1D
+D -> e     (1
+Z -> e     (1
+K -> +TK   (1+TK
+T -> FZ    (1+FZ
+F -> N     (1+N
+N -> 2D    (1+2D
+D -> e     (1+2
+Z -> *FZ   (1+2*FZ
+F -> N     (1+2*N
+
+Expressao: /3-4
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+
+Expressao: 5+(-6)
+Esperado: Rejeitada | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 5D    5D
+D -> e     5
+Z -> e     5
+K -> +TK   5+TK
+T -> FZ    5+FZ
+F -> (S)   5+(S)
+S -> TK    5+(TK
+T -> FZ    5+(FZ
+F -> -N    5+(N
+N -> 6D    5+(-6D
+D -> e     5+(-6
+Z -> e     5+(-6
+K -> e     5+(-6
+Z -> e     5+(-6)
+K -> e     5+(-6)
+
+Expressao: 7/8)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 7D    7D
+D -> e     7
+Z -> /FZ   7/FZ
+F -> N     7/N
+N -> 8D    7/8D
+D -> e     7/8
+Z -> e     7/8
+K -> e     7/8
+
+Expressao: 9(+1)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 9D    9D
+D -> e     9
+Z -> e     9
+K -> e     9
+
+Expressao: 2*3(-4)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 2D    2D
+D -> e     2
+Z -> *FZ   2*FZ
+F -> N     2*N
+N -> 3D    2*3D
+D -> e     2*3
+Z -> e     2*3
+K -> e     2*3
+
+Expressao: (5+6)*
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 5D    (5D
+D -> e     (5
+Z -> e     (5
+K -> +TK   (5+TK
+T -> FZ    (5+FZ
+F -> N     (5+N
+N -> 6D    (5+6D
+D -> e     (5+6
+Z -> e     (5+6
+K -> e     (5+6
+Z -> *FZ   (5+6)*FZ
+F -> N     (5+6)*N
+
+Expressao: 7*-8
+Esperado: Rejeitada | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 7D    7D
+D -> e     7
+Z -> *FZ   7*FZ
+F -> -N    7*N
+N -> 8D    7*-8D
+D -> e     7*-8
+Z -> e     7*-8
+K -> e     7*-8
+
+Expressao: (9/1+2
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 9D    (9D
+D -> e     (9
+Z -> /FZ   (9/FZ
+F -> N     (9/N
+N -> 1D    (9/1D
+D -> e     (9/1
+Z -> e     (9/1
+K -> +TK   (9/1+TK
+T -> FZ    (9/1+FZ
+F -> N     (9/1+N
+N -> 2D    (9/1+2D
+D -> e     (9/1+2
+Z -> e     (9/1+2
+K -> e     (9/1+2
+
+Expressao: -3*(4+5)
+Esperado: Rejeitada | Resultado: Cadeia aceita
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 3D    -3D
+D -> e     -3
+Z -> *FZ   -3*FZ
+F -> (S)   -3*(S)
+S -> TK    -3*(TK
+T -> FZ    -3*(FZ
+F -> N     -3*(N
+N -> 4D    -3*(4D
+D -> e     -3*(4
+Z -> e     -3*(4
+K -> +TK   -3*(4+TK
+T -> FZ    -3*(4+FZ
+F -> N     -3*(4+N
+N -> 5D    -3*(4+5D
+D -> e     -3*(4+5
+Z -> e     -3*(4+5
+K -> e     -3*(4+5
+Z -> e     -3*(4+5)
+K -> e     -3*(4+5)
+
+Expressao: (6/7)+)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 6D    (6D
+D -> e     (6
+Z -> /FZ   (6/FZ
+F -> N     (6/N
+N -> 7D    (6/7D
+D -> e     (6/7
+Z -> e     (6/7
+K -> e     (6/7
+Z -> e     (6/7)
+K -> +TK   (6/7)+TK
+T -> FZ    (6/7)+FZ
+F -> N     (6/7)+N
+
+Expressao: -8*9/
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 8D    -8D
+D -> e     -8
+Z -> *FZ   -8*FZ
+F -> N     -8*N
+N -> 9D    -8*9D
+D -> e     -8*9
+Z -> /FZ   -8*9/FZ
+F -> N     -8*9/N
+
+Expressao: 1+(2-3))
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 1D    1D
+D -> e     1
+Z -> e     1
+K -> +TK   1+TK
+T -> FZ    1+FZ
+F -> (S)   1+(S)
+S -> TK    1+(TK
+T -> FZ    1+(FZ
+F -> N     1+(N
+N -> 2D    1+(2D
+D -> e     1+(2
+Z -> e     1+(2
+K -> -TK   1+(2-TK
+T -> FZ    1+(2-FZ
+F -> N     1+(2-N
+N -> 3D    1+(2-3D
+D -> e     1+(2-3
+Z -> e     1+(2-3
+K -> e     1+(2-3
+Z -> e     1+(2-3)
+K -> e     1+(2-3)
+
+Expressao: 4(-5)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 4D    4D
+D -> e     4
+Z -> e     4
+K -> e     4
+
+Expressao: -6/7(
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 6D    -6D
+D -> e     -6
+Z -> /FZ   -6/FZ
+F -> N     -6/N
+N -> 7D    -6/7D
+D -> e     -6/7
+Z -> e     -6/7
+K -> e     -6/7
+
+Expressao: 8/(9+
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 8D    8D
+D -> e     8
+Z -> /FZ   8/FZ
+F -> (S)   8/(S)
+S -> TK    8/(TK
+T -> FZ    8/(FZ
+F -> N     8/(N
+N -> 9D    8/(9D
+D -> e     8/(9
+Z -> e     8/(9
+K -> +TK   8/(9+TK
+T -> FZ    8/(9+FZ
+F -> N     8/(9+N
+
+Expressao: +1+2
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+
+Expressao: 3*4-+
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 3D    3D
+D -> e     3
+Z -> *FZ   3*FZ
+F -> N     3*N
+N -> 4D    3*4D
+D -> e     3*4
+Z -> e     3*4
+K -> -TK   3*4-TK
+T -> FZ    3*4-FZ
+F -> N     3*4-N
+
+Expressao: (5/6**
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 5D    (5D
+D -> e     (5
+Z -> /FZ   (5/FZ
+F -> N     (5/N
+N -> 6D    (5/6D
+D -> e     (5/6
+Z -> *FZ   (5/6*FZ
+F -> N     (5/6*N
+
+Expressao: 7+(/8)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 7D    7D
+D -> e     7
+Z -> e     7
+K -> +TK   7+TK
+T -> FZ    7+FZ
+F -> (S)   7+(S)
+S -> TK    7+(TK
+T -> FZ    7+(FZ
+F -> N     7+(N
+
+Expressao: -9-(1+2
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 9D    -9D
+D -> e     -9
+Z -> e     -9
+K -> -TK   -9-TK
+T -> FZ    -9-FZ
+F -> (S)   -9-(S)
+S -> TK    -9-(TK
+T -> FZ    -9-(FZ
+F -> N     -9-(N
+N -> 1D    -9-(1D
+D -> e     -9-(1
+Z -> e     -9-(1
+K -> +TK   -9-(1+TK
+T -> FZ    -9-(1+FZ
+F -> N     -9-(1+N
+N -> 2D    -9-(1+2D
+D -> e     -9-(1+2
+Z -> e     -9-(1+2
+K -> e     -9-(1+2
+
+Expressao: (3/4)-)
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 3D    (3D
+D -> e     (3
+Z -> /FZ   (3/FZ
+F -> N     (3/N
+N -> 4D    (3/4D
+D -> e     (3/4
+Z -> e     (3/4
+K -> e     (3/4
+Z -> e     (3/4)
+K -> -TK   (3/4)-TK
+T -> FZ    (3/4)-FZ
+F -> N     (3/4)-N
+
+Expressao: 5*(6+7(
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> N     N
+N -> 5D    5D
+D -> e     5
+Z -> *FZ   5*FZ
+F -> (S)   5*(S)
+S -> TK    5*(TK
+T -> FZ    5*(FZ
+F -> N     5*(N
+N -> 6D    5*(6D
+D -> e     5*(6
+Z -> e     5*(6
+K -> +TK   5*(6+TK
+T -> FZ    5*(6+FZ
+F -> N     5*(6+N
+N -> 7D    5*(6+7D
+D -> e     5*(6+7
+Z -> e     5*(6+7
+K -> e     5*(6+7
+
+Expressao: -8/(9+1))
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> -N    N
+N -> 8D    -8D
+D -> e     -8
+Z -> /FZ   -8/FZ
+F -> (S)   -8/(S)
+S -> TK    -8/(TK
+T -> FZ    -8/(FZ
+F -> N     -8/(N
+N -> 9D    -8/(9D
+D -> e     -8/(9
+Z -> e     -8/(9
+K -> +TK   -8/(9+TK
+T -> FZ    -8/(9+FZ
+F -> N     -8/(9+N
+N -> 1D    -8/(9+1D
+D -> e     -8/(9+1
+Z -> e     -8/(9+1
+K -> e     -8/(9+1
+Z -> e     -8/(9+1)
+K -> e     -8/(9+1)
+
+Expressao: (2-3))+4
+Esperado: Rejeitada | Resultado: Cadeia rejeitada
+Caminho da recursao e formacao da cadeia:
+I -> S     S
+S -> TK    TK
+T -> FZ    FZ
+F -> (S)   (S)
+S -> TK    (TK
+T -> FZ    (FZ
+F -> N     (N
+N -> 2D    (2D
+D -> e     (2
+Z -> e     (2
+K -> -TK   (2-TK
+T -> FZ    (2-FZ
+F -> N     (2-N
+N -> 3D    (2-3D
+D -> e     (2-3
+Z -> e     (2-3
+K -> e     (2-3
+Z -> e     (2-3)
+K -> e     (2-3)
+
